@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Video and Audio</title>
 
-    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
     <script src="js/jquery.js"></script>
     <script src="js/mediaelement-and-player.min.js"></script>
     <!-- Add any other renderers you need; see Use Renderers for more information -->
-    <link rel="stylesheet" href="styles/mediaelementplayer.css" />
-    <link href="styles/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/mediaelementplayer.css" />
+    <link href="css/main.css" rel="stylesheet">
   </head>
   <body>
 
@@ -22,7 +22,7 @@
       <h2>Video Example</h2>
       
       <div class="videoWrapper">
-        <video width="852" height="480" class="mejs__player">
+        <video width="852" height="480">
           <source src="http://treehouse-code-samples.s3.amazonaws.com/html-video-and-audio/bridge.mp4" type="video/mp4">
           <source src="http://treehouse-code-samples.s3.amazonaws.com/html-video-and-audio/bridge.ogg" type="video/ogg">
           <track label="English" kind="subtitles" srclang="en" src="bridge-captions.vtt" default>
@@ -32,11 +32,19 @@
       <h2>Audio Example</h2>
 
       <div class="audioWrapper">
-        <audio class="mejs__player">
+        <audio>
           <source src="http://treehouse-code-samples.s3.amazonaws.com/html-video-and-audio/bridge-audio.mp3" type="audio/mp3">
         </audio>
       </div> <!-- /Audio wrappper --> 
     </div>
+
+    <script>
+      $('video, audio').mediaelementplayer({
+        // Displays featues from left to right that we want to see
+        features: ['playpause', 'tracks', 'progress', 'volume', 'fullscreen'] 
+      });
+    </script>
+
   </body>
 </html>
 
