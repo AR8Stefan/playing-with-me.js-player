@@ -25,12 +25,11 @@ h1, h2 {
 .videoWrapper, .audioWrapper {
   margin: 0 auto;
   display: block;
-
 }
 
 .videoWrapper {
   width: 852px;
-  }
+}
 
 .audioWrapper {
   width: 400px;

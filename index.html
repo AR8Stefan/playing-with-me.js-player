@@ -10,6 +10,17 @@
     <script src="js/jquery.js"></script>
     <script src="js/mediaelement-and-player.min.js"></script>
     <link href="css/mediaelementplayer.css" rel="stylesheet">
+    <!-- Skipback -->
+    <script src="skip-back/skip-back.min.js"></script>
+    <script src="skip-back/skip-back-i18n.js"></script>
+    <link href="skip-back/skip-back.min.css" rel="stylesheet">
+    
+
+    <!-- Airplay -->
+    <script src="airplay/airplay.min.js"></script>
+    <link href="airplay/airplay.min.css" rel="stylesheet">
+    
+
     <link href="css/main.css" rel="stylesheet">
   </head>
   <body>
@@ -36,16 +47,15 @@
         </audio>
       </div>
     </div>
-
     <script>
       $('video, audio').mediaelementplayer({
-        // Displays featues from left to right that we want to see
-        features: ['playpause', 'progress', 'tracks', 'volume', 'fullscreen'],
-        hideCaptionsButtonWhenEmpty: false,
-        startLanguage: 'en'
+        //// Displays featues from left to right that we want to see
+        features: ['playpause', 'tracks', 'progress', 'volume', 'skipback', 'airplay'],
+        startLanguage: 'en',
+        skipBackInterval: 5,
+        startVolume: 0.5
       });
     </script>
-
   </body>
 </html>
 
